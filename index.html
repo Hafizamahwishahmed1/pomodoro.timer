@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Pomodoro Timer</h1>
+
+                <div class="card-header-buttons">
+                    <button id="buttonTypePomodoro"
+                            class="active" onclick="setPomodoroType(TIMER_TYPE_POMODORO)">
+                            Focus</button>
+                    <button id="buttonTypeShortBreak" 
+                            onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK)">
+                            Break</button>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div id="circularProgressBar" 
+                         class="progress-bar">
+                         <div class="progress-bar-inner">
+                            <h2 class="progress-value">
+                                25:00
+                            </h2>
+                         </div>
+
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn-sucess"
+                            onclick="startTimer();"><i class="fa-solid fa-play"></i>
+                            </button>
+                    <button class="btn-danger"
+                            onclick="stopTimer();"><i class="fa-solid fa-pause"></i>
+                            </button>
+                    <button onclick="resetTimer();"><i class="fa-solid fa-rotate-right"></i>
+                            </button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
